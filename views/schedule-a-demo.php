@@ -79,7 +79,7 @@
                 <label class="nm-label">Full Name *</label>
                 <input type="text" name="full_name" class="nm-input" placeholder="Your Name" required>
               </div>
-              <div class="nm-hero-form-row">
+              <div class="nm-form-row-2 nm-hero-form-row">
                 <div class="nm-form-group">
                   <label class="nm-label">Work Email *</label>
                   <input type="email" name="email" class="nm-input" placeholder="doctor@practice.com" required>

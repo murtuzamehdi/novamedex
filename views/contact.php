@@ -93,7 +93,7 @@
               <input type="hidden" name="form_type" value="Contact Page Inquiry">
               <input type="hidden" name="redirect_to" value="thank-you/">
               <input type="text" name="_hp_company" style="display:none !important;" tabindex="-1" autocomplete="off">
-              <div class="nm-hero-form-row">
+              <div class="nm-form-row-2 nm-hero-form-row">
                 <div class="nm-form-group">
                   <label class="nm-label">Full Name *</label>
                   <input type="text" name="full_name" class="nm-input" placeholder="Dr. John Doe" required>
@@ -103,7 +103,7 @@
                   <input type="tel" name="phone" class="nm-input" placeholder="(555) 000-0000" required>
                 </div>
               </div>
-              <div class="nm-hero-form-row">
+              <div class="nm-form-row-2 nm-hero-form-row">
                 <div class="nm-form-group">
                   <label class="nm-label">Email Address *</label>
                   <input type="email" name="email" class="nm-input" placeholder="john@clinic.com" required>

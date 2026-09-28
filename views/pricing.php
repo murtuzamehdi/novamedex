@@ -91,7 +91,7 @@
                 <div class="nm-form-group">
                   <input type="number" name="monthly_collections" class="nm-input" placeholder="Monthly Collections ($USD) *" required>
                 </div>
-                <div class="nm-hero-form-row">
+                <div class="nm-form-row-2 nm-hero-form-row">
                   <div class="nm-form-group" style="margin-bottom:0;">
                     <input type="email" name="email" class="nm-input" placeholder="Work Email *" required>
                   </div>
