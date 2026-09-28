@@ -93,7 +93,7 @@
                 </div>
                 <div class="row nm-form-row-6" style="display:flex; flex-wrap:wrap; margin-left:-8px; margin-right:-8px;">
                   <div class="col-12 col-md-6 nm-form-col-6" style="flex:0 0 50%; max-width:50%; width:50%; padding:0 8px; box-sizing:border-box;">
-                    <div class="nm-form-group" style="margin-bottom:0;">
+                    <div class="nm-form-group" style="margin-bottom:18px;">
                       <input type="email" name="email" class="nm-input" placeholder="Work Email *" required>
                     </div>
                   </div>

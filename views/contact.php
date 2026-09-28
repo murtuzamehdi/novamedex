@@ -94,13 +94,13 @@
               <input type="hidden" name="redirect_to" value="thank-you/">
               <input type="text" name="_hp_company" style="display:none !important;" tabindex="-1" autocomplete="off">
               <div class="row nm-form-row-6" style="display:flex; flex-wrap:wrap; margin-left:-8px; margin-right:-8px;">
-                <div class="col-12 col-md-6 nm-form-col-6" style="flex:0 0 50%; max-width:50%; width:50%; padding:0 8px; box-sizing:border-box;">
+                <div class="col-6 col-md-6 nm-form-col-6" style="flex:0 0 50%; max-width:50%; width:50%; padding:0 8px; box-sizing:border-box;">
                   <div class="nm-form-group">
                     <label class="nm-label">Full Name *</label>
                     <input type="text" name="full_name" class="nm-input" placeholder="Dr. John Doe" required>
                   </div>
                 </div>
-                <div class="col-12 col-md-6 nm-form-col-6" style="flex:0 0 50%; max-width:50%; width:50%; padding:0 8px; box-sizing:border-box;">
+                <div class="col-6 col-md-6 nm-form-col-6" style="flex:0 0 50%; max-width:50%; width:50%; padding:0 8px; box-sizing:border-box;">
                   <div class="nm-form-group">
                     <label class="nm-label">Phone Number *</label>
                     <input type="tel" name="phone" class="nm-input" placeholder="(555) 000-0000" required>
@@ -108,13 +108,13 @@
                 </div>
               </div>
               <div class="row nm-form-row-6" style="display:flex; flex-wrap:wrap; margin-left:-8px; margin-right:-8px;">
-                <div class="col-12 col-md-6 nm-form-col-6" style="flex:0 0 50%; max-width:50%; width:50%; padding:0 8px; box-sizing:border-box;">
+                <div class="col-6 col-md-6 nm-form-col-6" style="flex:0 0 50%; max-width:50%; width:50%; padding:0 8px; box-sizing:border-box;">
                   <div class="nm-form-group">
                     <label class="nm-label">Email Address *</label>
                     <input type="email" name="email" class="nm-input" placeholder="john@clinic.com" required>
                   </div>
                 </div>
-                <div class="col-12 col-md-6 nm-form-col-6" style="flex:0 0 50%; max-width:50%; width:50%; padding:0 8px; box-sizing:border-box;">
+                <div class="col-6 col-md-6 nm-form-col-6" style="flex:0 0 50%; max-width:50%; width:50%; padding:0 8px; box-sizing:border-box;">
                   <div class="nm-form-group">
                     <label class="nm-label">Practice Name</label>
                     <input type="text" name="practice_name" class="nm-input" placeholder="Metro Health Partners">
