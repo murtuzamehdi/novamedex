@@ -91,12 +91,16 @@
                 <div class="nm-form-group">
                   <input type="number" name="monthly_collections" class="nm-input" placeholder="Monthly Collections ($USD) *" required>
                 </div>
-                <div class="nm-form-row-2 nm-hero-form-row">
-                  <div class="nm-form-group" style="margin-bottom:0;">
-                    <input type="email" name="email" class="nm-input" placeholder="Work Email *" required>
+                <div class="row nm-form-row-6" style="display:flex; flex-wrap:wrap; margin-left:-8px; margin-right:-8px;">
+                  <div class="col-12 col-md-6 nm-form-col-6" style="flex:0 0 50%; max-width:50%; width:50%; padding:0 8px; box-sizing:border-box;">
+                    <div class="nm-form-group" style="margin-bottom:0;">
+                      <input type="email" name="email" class="nm-input" placeholder="Work Email *" required>
+                    </div>
                   </div>
-                  <div class="nm-form-group" style="margin-bottom:0;">
-                    <input type="tel" name="phone" class="nm-input" placeholder="Phone Number *" required>
+                  <div class="col-12 col-md-6 nm-form-col-6" style="flex:0 0 50%; max-width:50%; width:50%; padding:0 8px; box-sizing:border-box;">
+                    <div class="nm-form-group" style="margin-bottom:0;">
+                      <input type="tel" name="phone" class="nm-input" placeholder="Phone Number *" required>
+                    </div>
                   </div>
                 </div>
                 <button type="submit" class="nm-btn nm-btn-primary nm-btn-full" style="margin-top:14px;">

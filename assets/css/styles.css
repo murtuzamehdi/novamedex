@@ -670,13 +670,37 @@ button, input, select, textarea {
   margin-bottom: 14px;
 }
 
-/* 2-Column Responsive Form Row for Form Cards (Contact, Pricing, Demo) */
+/* 6-6 Column Grid System for Form Rows (Bootstrap 6-6 Column Layout) */
+.row,
+.nm-form-row-6,
 .nm-form-row-2,
 .nm-card-form .nm-hero-form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 0;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-left: -8px !important;
+  margin-right: -8px !important;
+  margin-bottom: 0 !important;
+}
+
+.col-6,
+.col-md-6,
+.nm-form-col-6 {
+  flex: 0 0 50% !important;
+  max-width: 50% !important;
+  width: 50% !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  box-sizing: border-box !important;
+}
+
+.col-12,
+.nm-form-col-12 {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  box-sizing: border-box !important;
 }
 
 @media (max-width: 768px) {
@@ -684,11 +708,14 @@ button, input, select, textarea {
     grid-template-columns: 1fr;
     gap: 12px;
   }
+}
 
-  .nm-form-row-2,
-  .nm-card-form .nm-hero-form-row {
-    grid-template-columns: 1fr;
-    gap: 0;
+@media (max-width: 640px) {
+  .col-md-6,
+  .nm-form-col-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
   }
 }
 

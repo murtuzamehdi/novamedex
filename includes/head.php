@@ -27,4 +27,4 @@ if (isset($_SERVER['HTTPS'])) {
 
   <!-- Clean Modular CSS -->
   <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=<?= time() ?>">
