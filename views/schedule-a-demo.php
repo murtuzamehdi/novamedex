@@ -71,28 +71,31 @@
           <div class="nm-card-form">
             <h3 style="font-size:1.35rem; margin-bottom:6px; color:var(--color-primary);">Book Your 1-on-1 Walkthrough</h3>
             <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:20px;">Select your preferred time with a senior NovaMedex solution specialist.</p>
-            <form class="nm-form">
+            <form class="nm-form" action="send-mail.php" method="POST">
+              <input type="hidden" name="form_type" value="Schedule 1-on-1 Walkthrough">
+              <input type="hidden" name="redirect_to" value="thank-you/">
+              <input type="text" name="_hp_company" style="display:none !important;" tabindex="-1" autocomplete="off">
               <div class="nm-form-group">
                 <label class="nm-label">Full Name *</label>
-                <input type="text" class="nm-input" placeholder="Your Name" required>
+                <input type="text" name="full_name" class="nm-input" placeholder="Your Name" required>
               </div>
               <div class="nm-hero-form-row">
                 <div class="nm-form-group">
                   <label class="nm-label">Work Email *</label>
-                  <input type="email" class="nm-input" placeholder="doctor@practice.com" required>
+                  <input type="email" name="email" class="nm-input" placeholder="doctor@practice.com" required>
                 </div>
                 <div class="nm-form-group">
                   <label class="nm-label">Phone *</label>
-                  <input type="tel" class="nm-input" placeholder="(555) 000-0000" required>
+                  <input type="tel" name="phone" class="nm-input" placeholder="(555) 000-0000" required>
                 </div>
               </div>
               <div class="nm-form-group">
                 <label class="nm-label">Specialty *</label>
-                <input type="text" class="nm-input" placeholder="e.g. Cardiology, Urgent Care, Internal Med" required>
+                <input type="text" name="service_interest" class="nm-input" placeholder="e.g. Cardiology, Urgent Care, Internal Med" required>
               </div>
               <div class="nm-form-group">
                 <label class="nm-label">Preferred Demo Date/Time *</label>
-                <input type="datetime-local" class="nm-input" required>
+                <input type="datetime-local" name="preferred_datetime" class="nm-input" required>
               </div>
               <button type="submit" class="nm-btn nm-btn-primary nm-btn-full nm-btn-lg">
                 Confirm Demo Appointment <i class="fa-solid fa-calendar-check"></i>

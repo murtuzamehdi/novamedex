@@ -71,29 +71,32 @@
             <div class="nm-card-form" id="pricing-unlock">
               <h3 style="margin-bottom:14px; font-size:1.25rem;">Unlock Custom Practice Pricing</h3>
               <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:18px;">Drop your details to receive an instant fee breakdown based on your specialty and monthly collections volume.</p>
-              <form class="nm-form">
+              <form class="nm-form" action="send-mail.php" method="POST">
+                <input type="hidden" name="form_type" value="Custom Practice Pricing Unlock">
+                <input type="hidden" name="redirect_to" value="thank-you/">
+                <input type="text" name="_hp_company" style="display:none !important;" tabindex="-1" autocomplete="off">
                 <div class="nm-form-group">
-                  <select class="nm-select" required>
+                  <select name="practice_volume" class="nm-select" required>
                     <option value="" disabled selected>Select Practice Type *</option>
-                    <option value="physician">Solo Physician</option>
-                    <option value="group">Group Medical Practice</option>
-                    <option value="specialty">Specialty Clinic</option>
-                    <option value="lab">Diagnostic / Laboratory</option>
-                    <option value="hospital">Hospital / Ambulatory Center</option>
+                    <option value="Solo Physician">Solo Physician</option>
+                    <option value="Group Medical Practice">Group Medical Practice</option>
+                    <option value="Specialty Clinic">Specialty Clinic</option>
+                    <option value="Diagnostic / Laboratory">Diagnostic / Laboratory</option>
+                    <option value="Hospital / Ambulatory Center">Hospital / Ambulatory Center</option>
                   </select>
                 </div>
                 <div class="nm-form-group">
-                  <input type="text" class="nm-input" placeholder="Practice Name *" required>
+                  <input type="text" name="practice_name" class="nm-input" placeholder="Practice Name *" required>
                 </div>
                 <div class="nm-form-group">
-                  <input type="number" class="nm-input" placeholder="Monthly Collections ($USD) *" required>
+                  <input type="number" name="monthly_collections" class="nm-input" placeholder="Monthly Collections ($USD) *" required>
                 </div>
                 <div class="nm-hero-form-row">
                   <div class="nm-form-group" style="margin-bottom:0;">
-                    <input type="email" class="nm-input" placeholder="Work Email *" required>
+                    <input type="email" name="email" class="nm-input" placeholder="Work Email *" required>
                   </div>
                   <div class="nm-form-group" style="margin-bottom:0;">
-                    <input type="tel" class="nm-input" placeholder="Phone Number *" required>
+                    <input type="tel" name="phone" class="nm-input" placeholder="Phone Number *" required>
                   </div>
                 </div>
                 <button type="submit" class="nm-btn nm-btn-primary nm-btn-full" style="margin-top:14px;">

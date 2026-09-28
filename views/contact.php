@@ -89,41 +89,44 @@
           <div class="nm-card-form">
             <h3 style="font-size:1.35rem; margin-bottom:6px; color:var(--color-primary);">Send Us a Message</h3>
             <p style="font-size:0.88rem; color:var(--color-text-muted); margin-bottom:20px;">We respond to all practice inquiries within 2 business hours.</p>
-            <form class="nm-form" id="nmContactPageForm">
+            <form class="nm-form" id="nmContactPageForm" action="send-mail.php" method="POST">
+              <input type="hidden" name="form_type" value="Contact Page Inquiry">
+              <input type="hidden" name="redirect_to" value="thank-you/">
+              <input type="text" name="_hp_company" style="display:none !important;" tabindex="-1" autocomplete="off">
               <div class="nm-hero-form-row">
                 <div class="nm-form-group">
                   <label class="nm-label">Full Name *</label>
-                  <input type="text" class="nm-input" placeholder="Dr. John Doe" required>
+                  <input type="text" name="full_name" class="nm-input" placeholder="Dr. John Doe" required>
                 </div>
                 <div class="nm-form-group">
                   <label class="nm-label">Phone Number *</label>
-                  <input type="tel" class="nm-input" placeholder="(555) 000-0000" required>
+                  <input type="tel" name="phone" class="nm-input" placeholder="(555) 000-0000" required>
                 </div>
               </div>
               <div class="nm-hero-form-row">
                 <div class="nm-form-group">
                   <label class="nm-label">Email Address *</label>
-                  <input type="email" class="nm-input" placeholder="john@clinic.com" required>
+                  <input type="email" name="email" class="nm-input" placeholder="john@clinic.com" required>
                 </div>
                 <div class="nm-form-group">
                   <label class="nm-label">Practice Name</label>
-                  <input type="text" class="nm-input" placeholder="Metro Health Partners">
+                  <input type="text" name="practice_name" class="nm-input" placeholder="Metro Health Partners">
                 </div>
               </div>
               <div class="nm-form-group">
                 <label class="nm-label">Service of Interest *</label>
-                <select class="nm-select" required>
+                <select name="service_interest" class="nm-select" required>
                   <option value="" disabled selected>Select Primary Need</option>
-                  <option value="billing">Complete Medical Billing (2.49%)</option>
-                  <option value="coding">Certified Medical Coding (AAPC)</option>
-                  <option value="audit">Free Practice Revenue Audit</option>
-                  <option value="credentialing">Provider Credentialing</option>
-                  <option value="denial">Denial Recovery</option>
+                  <option value="Complete Medical Billing (2.49%)">Complete Medical Billing (2.49%)</option>
+                  <option value="Certified Medical Coding (AAPC)">Certified Medical Coding (AAPC)</option>
+                  <option value="Free Practice Revenue Audit">Free Practice Revenue Audit</option>
+                  <option value="Provider Credentialing">Provider Credentialing</option>
+                  <option value="Denial Recovery">Denial Recovery</option>
                 </select>
               </div>
               <div class="nm-form-group">
                 <label class="nm-label">How Can We Help Your Practice? *</label>
-                <textarea class="nm-textarea" rows="3" placeholder="Tell us about your practice volume or current billing challenges..." required></textarea>
+                <textarea name="message" class="nm-textarea" rows="3" placeholder="Tell us about your practice volume or current billing challenges..." required></textarea>
               </div>
               <button type="submit" class="nm-btn nm-btn-primary nm-btn-full nm-btn-lg">
                 Submit Practice Inquiry <i class="fa-solid fa-paper-plane"></i>

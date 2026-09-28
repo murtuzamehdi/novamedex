@@ -77,9 +77,12 @@
           <h3>Subscribe to Our Industry Insights</h3>
           <p>Get the latest medical coding updates, fee schedule changes, and RCM strategies delivered monthly.</p>
         </div>
-        <form class="nm-newsletter-form">
+        <form class="nm-newsletter-form" action="send-mail.php" method="POST">
+          <input type="hidden" name="form_type" value="Newsletter Subscription">
+          <input type="hidden" name="redirect_to" value="thank-you/">
+          <input type="text" name="_hp_company" style="display:none !important;" tabindex="-1" autocomplete="off">
           <div class="nm-newsletter-input-group">
-            <input type="email" placeholder="Enter your email address *" required>
+            <input type="email" name="email" placeholder="Enter your email address *" required>
             <button type="submit">Subscribe</button>
           </div>
           <label class="nm-gdpr-check">

@@ -61,16 +61,19 @@
 
             <!-- Quick Consultation Form Card -->
             <div class="nm-hero-form-card">
-              <form class="nm-form">
+              <form class="nm-form" action="send-mail.php" method="POST">
+                <input type="hidden" name="form_type" value="Homepage Consultation Request">
+                <input type="hidden" name="redirect_to" value="thank-you/">
+                <input type="text" name="_hp_company" style="display:none !important;" tabindex="-1" autocomplete="off">
                 <div class="nm-hero-form-row">
                   <div class="nm-form-group" style="margin-bottom:0;">
-                    <input type="text" class="nm-input" placeholder="Name *" required>
+                    <input type="text" name="full_name" class="nm-input" placeholder="Name *" required>
                   </div>
                   <div class="nm-form-group" style="margin-bottom:0;">
-                    <input type="email" class="nm-input" placeholder="Email *" required>
+                    <input type="email" name="email" class="nm-input" placeholder="Email *" required>
                   </div>
                   <div class="nm-form-group" style="margin-bottom:0;">
-                    <input type="tel" class="nm-input" placeholder="Phone *" required>
+                    <input type="tel" name="phone" class="nm-input" placeholder="Phone *" required>
                   </div>
                 </div>
                 <button type="submit" class="nm-btn nm-btn-primary nm-btn-full">

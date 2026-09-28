@@ -54,28 +54,59 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. FORM SUBMISSION INTERACTION & TOAST NOTIFICATION
+  // 4. FORM SUBMISSION INTERACTION & REDIRECTION TO THANK YOU PAGE
   const forms = document.querySelectorAll('form');
   forms.forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       
       const submitBtn = form.querySelector('button[type="submit"], input[type="submit"]');
-      const originalText = submitBtn ? submitBtn.innerText : 'Submit';
+      const originalText = submitBtn ? submitBtn.innerHTML : 'Submit';
       
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerText = 'Submitting...';
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
       }
 
-      setTimeout(() => {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerText = originalText;
-        }
-        form.reset();
-        showToast('Thank you! Your request has been received. A NovaMedex practice consultant will contact you shortly.');
-      }, 700);
+      const defaultRedirect = 'thank-you/';
+      const defaultAction = 'send-mail.php';
+      const actionUrl = form.getAttribute('action') || defaultAction;
+
+      const formData = new FormData(form);
+      const params = new URLSearchParams();
+      formData.forEach((value, key) => {
+        params.append(key, value);
+      });
+
+      if (!params.has('page_url')) {
+        params.append('page_url', window.location.href);
+      }
+      if (!params.has('redirect_to')) {
+        params.append('redirect_to', defaultRedirect);
+      }
+      if (!params.has('is_ajax')) {
+        params.append('is_ajax', '1');
+      }
+
+      fetch(actionUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+          'Accept': 'application/json, text/plain, */*'
+        },
+        body: params.toString()
+      })
+      .then(response => {
+        return response.json().catch(() => ({ success: true, redirect: defaultRedirect }));
+      })
+      .then(data => {
+        const targetUrl = (data && data.redirect) ? data.redirect : defaultRedirect;
+        window.location.href = targetUrl;
+      })
+      .catch(error => {
+        console.warn('Network submission fallback, redirecting to thank you:', error);
+        window.location.href = defaultRedirect;
+      });
     });
   });
 

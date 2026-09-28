@@ -70,7 +70,7 @@
           <a href="tel:8889876250" class="nm-btn nm-btn-primary nm-btn-lg">
             <i class="fa-solid fa-phone"></i> Call Now: (888) 987-6250
           </a>
-          <a href="index.html" class="nm-btn nm-btn-outline nm-btn-lg">
+          <a href="./" class="nm-btn nm-btn-outline nm-btn-lg">
             <i class="fa-solid fa-house"></i> Return to Homepage
           </a>
         </div>

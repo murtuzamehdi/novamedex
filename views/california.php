@@ -24,16 +24,19 @@
             
   <div class="nm-hero-form-card">
     <h3 style="font-size:1.15rem; margin-bottom:12px; color:var(--color-primary);">Request Free Consultation</h3>
-    <form class="nm-form" id="nmHeroInnerForm">
+    <form class="nm-form" id="nmHeroInnerForm" action="send-mail.php" method="POST">
+    <input type="hidden" name="form_type" value="Practice Consultation Request">
+    <input type="hidden" name="redirect_to" value="thank-you/">
+    <input type="text" name="_hp_company" style="display:none !important;" tabindex="-1" autocomplete="off">
       <div class="nm-hero-form-row">
         <div class="nm-form-group" style="margin-bottom:0;">
-          <input type="text" class="nm-input" placeholder="Your Name *" required>
+          <input type="text" name="full_name" class="nm-input" placeholder="Your Name *" required>
         </div>
         <div class="nm-form-group" style="margin-bottom:0;">
-          <input type="email" class="nm-input" placeholder="Work Email *" required>
+          <input type="email" name="email" class="nm-input" placeholder="Work Email *" required>
         </div>
         <div class="nm-form-group" style="margin-bottom:0;">
-          <input type="tel" class="nm-input" placeholder="Phone Number *" required>
+          <input type="tel" name="phone" class="nm-input" placeholder="Phone Number *" required>
         </div>
       </div>
       <button type="submit" class="nm-btn nm-btn-primary nm-btn-full">
