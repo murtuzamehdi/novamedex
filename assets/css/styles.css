@@ -1,0 +1,1709 @@
+@import url('variables.css');
+
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text-body);
+  background-color: var(--color-bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  color: var(--color-text-title);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--color-cyan);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-teal);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* ==========================================================================
+   2. LAYOUT & UTILITIES
+   ========================================================================== */
+
+.nm-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.nm-section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.nm-section-sm {
+  padding: 50px 0;
+}
+
+.nm-section-alt {
+  background-color: var(--color-bg-alt);
+}
+
+.nm-section-white {
+  background-color: var(--color-white);
+}
+
+.nm-section-dark {
+  background: var(--color-navy-gradient);
+  color: var(--color-text-white);
+}
+
+.nm-section-dark h1,
+.nm-section-dark h2,
+.nm-section-dark h3,
+.nm-section-dark h4 {
+  color: var(--color-text-white);
+}
+
+.nm-section-dark p {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* Section Header Typography */
+.nm-section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 50px auto;
+}
+
+.nm-section-header.text-left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.nm-section-tag {
+  display: inline-block;
+  font-family: var(--font-family-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-cyan);
+  margin-bottom: 12px;
+  padding: 4px 14px;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: var(--radius-full);
+}
+
+.nm-section-dark .nm-section-tag {
+  background: rgba(0, 180, 216, 0.2);
+  color: #38BDF8;
+}
+
+.nm-section-title {
+  font-size: 2.35rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .nm-section-title {
+    font-size: 1.85rem;
+  }
+}
+
+.nm-section-desc {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.nm-section-dark .nm-section-desc {
+  color: #CBD5E1;
+}
+
+/* Grid Utilities */
+.nm-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.nm-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.nm-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.nm-grid-sidebar {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+}
+
+@media (max-width: 991px) {
+  .nm-grid-2,
+  .nm-grid-3,
+  .nm-grid-4,
+  .nm-grid-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 991px) {
+  .nm-grid-3,
+  .nm-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   3. TOP BAR & GLOBAL HEADER
+   ========================================================================== */
+
+.nm-topbar {
+  background-color: #071530;
+  color: #94A3B8;
+  font-size: 0.85rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nm-topbar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nm-topbar-left,
+.nm-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nm-topbar a {
+  color: #CBD5E1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.nm-topbar a:hover {
+  color: var(--color-cyan);
+}
+
+.nm-topbar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34D399;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .nm-topbar-right {
+    display: none;
+  }
+}
+
+/* Header Navbar */
+.nm-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 20px rgba(10, 31, 68, 0.06);
+  z-index: 1000;
+  transition: box-shadow var(--transition-normal);
+}
+
+.nm-header.scrolled {
+  box-shadow: 0 8px 30px rgba(10, 31, 68, 0.12);
+}
+
+.nm-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  position: relative;
+}
+
+.nm-logo img {
+  max-height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nm-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nm-nav-item {
+  position: relative;
+}
+
+/* Nav items containing the mega menu use static positioning so the mega menu centers on the header container */
+.nm-nav-item.has-mega,
+.nm-nav-item:has(.nm-mega-menu) {
+  position: static;
+}
+
+.nm-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  color: var(--color-primary);
+  font-family: var(--font-family-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.nm-nav-link:hover,
+.nm-nav-item:hover > .nm-nav-link {
+  color: var(--color-cyan);
+  background: rgba(0, 180, 216, 0.06);
+}
+
+.nm-nav-arrow {
+  font-size: 0.72rem;
+  transition: transform var(--transition-fast);
+}
+
+.nm-nav-item:hover .nm-nav-arrow {
+  transform: rotate(180deg);
+}
+
+/* Header Right CTA */
+.nm-header-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nm-btn-expert {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-accent-gradient);
+  color: var(--color-white);
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-glow);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.nm-btn-expert:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 201, 167, 0.45);
+  color: var(--color-white);
+}
+
+/* Simple Dropdown */
+.nm-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 260px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-fast);
+  z-index: 1010;
+}
+
+/* Right-align dropdowns near the end of the navigation list */
+.nm-nav-item:last-child .nm-dropdown,
+.nm-nav-item:nth-last-child(2) .nm-dropdown {
+  left: auto;
+  right: 0;
+}
+
+.nm-nav-item:hover > .nm-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nm-dropdown-link {
+  display: block;
+  padding: 10px 14px;
+  color: var(--color-text-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: var(--radius-xs);
+  transition: all var(--transition-fast);
+}
+
+.nm-dropdown-link:hover {
+  background: rgba(0, 180, 216, 0.08);
+  color: var(--color-cyan);
+  padding-left: 18px;
+}
+
+/* Mega Menu Dropdown - Centered on Header Container */
+.nm-mega-menu {
+  position: absolute;
+  top: calc(100% - 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 960px;
+  max-width: calc(100% - 32px);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
+  z-index: 1010;
+}
+
+/* Invisible bridge so mouse hover never drops between nav link and mega menu */
+.nm-mega-menu::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
+.nm-nav-item:hover > .nm-mega-menu,
+.nm-nav-item.has-mega:hover .nm-mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nm-mega-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.nm-mega-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  background: #F8FAFC;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.nm-mega-card:hover {
+  background: var(--color-white);
+  border-color: var(--color-cyan);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.nm-mega-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.nm-mega-icon.green {
+  background: var(--color-emerald-gradient);
+}
+
+.nm-mega-info h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--color-primary);
+}
+
+.nm-mega-info p {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Mobile Hamburger Toggle */
+.nm-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 6px;
+}
+
+@media (max-width: 991px) {
+  .nm-nav {
+    display: none;
+  }
+  .nm-mobile-toggle {
+    display: block;
+  }
+}
+
+/* Mobile Drawer Overlay & Menu */
+.nm-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 31, 68, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+}
+
+.nm-drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nm-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  max-width: 85vw;
+  background: var(--color-white);
+  z-index: 2010;
+  transform: translateX(100%);
+  transition: transform var(--transition-smooth);
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.nm-drawer.active {
+  transform: translateX(0);
+}
+
+.nm-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nm-drawer-close {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.nm-drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nm-drawer-section-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-cyan);
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+
+.nm-drawer-link {
+  color: var(--color-text-title);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 8px 0;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+/* ==========================================================================
+   4. HERO SECTIONS
+   ========================================================================== */
+
+/* Homepage Hero */
+.nm-hero-home {
+  padding: 60px 0 80px 0;
+  background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.nm-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 48px;
+}
+
+@media (max-width: 991px) {
+  .nm-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.nm-hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.nm-hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  margin-bottom: 18px;
+}
+
+.nm-hero-text {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+/* Hero Consultation Form Card */
+.nm-hero-form-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+}
+
+.nm-hero-form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 640px) {
+  .nm-hero-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hero Physician Banner Image & Floating Badges */
+.nm-hero-banner-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.nm-hero-banner-wrap img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+.nm-hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,31,68,0.05) 0%, rgba(10,31,68,0.5) 100%);
+  pointer-events: none;
+}
+
+.nm-hero-banner-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-md);
+}
+
+.nm-banner-badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.nm-banner-badge-text strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.nm-banner-badge-text span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Floating Feature Pills */
+.nm-floating-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+  justify-content: center;
+}
+
+.nm-pill {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Flagship Dark Hero (services/medical-billing.html) */
+.nm-hero-dark {
+  background: var(--color-navy-gradient);
+  padding: 70px 0;
+  color: var(--color-white);
+}
+
+.nm-hero-dark h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #FFFFFF !important;
+  margin-bottom: 20px;
+}
+
+.nm-hero-dark p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+/* Standard Inner Page Hero */
+.nm-hero-inner {
+  background: linear-gradient(180deg, #F8FAFC 0%, #EDF4FC 100%);
+  padding: 60px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nm-hero-inner-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 40px;
+}
+
+@media (max-width: 991px) {
+  .nm-hero-inner-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nm-hero-inner h1 {
+  font-size: 2.65rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.nm-hero-inner-lead {
+  font-size: 1.15rem;
+  color: var(--color-text-body);
+  line-height: 1.75;
+}
+
+/* ==========================================================================
+   5. BUTTONS & FORMS
+   ========================================================================== */
+
+.nm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.nm-btn-primary {
+  background: var(--color-accent-gradient);
+  color: var(--color-white);
+  box-shadow: var(--shadow-glow);
+}
+
+.nm-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 201, 167, 0.45);
+  color: var(--color-white);
+}
+
+.nm-btn-full {
+  width: 100%;
+}
+
+.nm-btn-lg {
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  border-radius: var(--radius-full);
+}
+
+.nm-btn-secondary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.nm-btn-secondary:hover {
+  background: var(--color-primary-light);
+  color: var(--color-white);
+}
+
+.nm-btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-cyan);
+  color: var(--color-cyan);
+}
+
+.nm-btn-outline:hover {
+  background: var(--color-cyan);
+  color: var(--color-white);
+}
+
+/* Form Controls */
+.nm-form-group {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.nm-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.nm-input,
+.nm-select,
+.nm-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  background: var(--color-white);
+  color: var(--color-text-title);
+  font-size: 0.95rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.nm-input:focus,
+.nm-select:focus,
+.nm-textarea:focus {
+  outline: none;
+  border-color: var(--color-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.18);
+}
+
+.nm-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Clean Form Card */
+.nm-card-form {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+}
+
+/* ==========================================================================
+   6. STATS & TRUST BADGES
+   ========================================================================== */
+
+/* Modern Trust Accreditation Cards */
+.nm-trust-badges-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 36px 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  margin: 40px 0;
+}
+
+@media (max-width: 1100px) {
+  .nm-trust-badges-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .nm-trust-badges-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nm-trust-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 10px rgba(10, 31, 68, 0.04);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.nm-trust-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(10, 31, 68, 0.08);
+  border-color: var(--color-cyan);
+}
+
+.nm-trust-card-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nm-trust-card-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.nm-trust-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.nm-trust-card-title {
+  font-family: var(--font-family-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.nm-trust-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.nm-trust-stars {
+  color: #F59E0B;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.nm-trust-stars.trustpilot {
+  color: #00B67A;
+}
+
+.nm-trust-card-count {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.nm-trust-card-verified {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-emerald);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+/* Stats Cards */
+.nm-stat-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.nm-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-cyan);
+}
+
+.nm-stat-number {
+  font-family: var(--font-family-heading);
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--color-cyan);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.nm-stat-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.nm-stat-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   7. SERVICE CARDS & FEATURE GRIDS
+   ========================================================================== */
+
+.nm-card-service {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nm-card-service:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-cyan);
+}
+
+.nm-service-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 180, 216, 0.1);
+  color: var(--color-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.nm-card-service:hover .nm-service-icon {
+  background: var(--color-accent-gradient);
+  color: var(--color-white);
+}
+
+.nm-card-service h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+  line-height: 1.3;
+}
+
+.nm-card-service p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.nm-link-learn {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.nm-link-learn i {
+  transition: transform var(--transition-fast);
+}
+
+.nm-card-service:hover .nm-link-learn i {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   8. PRICING SECTION & CALCULATOR
+   ========================================================================== */
+
+.nm-pricing-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  background: rgba(0, 180, 216, 0.1);
+  border-radius: var(--radius-full);
+  color: var(--color-cyan);
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.nm-pricing-tier-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 36px 30px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  text-align: center;
+  transition: transform var(--transition-fast);
+}
+
+.nm-pricing-tier-card.featured {
+  border: 2px solid var(--color-cyan);
+  box-shadow: var(--shadow-lg);
+  transform: scale(1.03);
+}
+
+.nm-tier-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent-gradient);
+  color: var(--color-white);
+  padding: 4px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.nm-tier-price {
+  font-family: var(--font-family-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 16px 0 8px 0;
+}
+
+.nm-tier-price span {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   9. COMPARISON SECTION (WITH VS WITHOUT NOVAMEDEX)
+   ========================================================================== */
+
+.nm-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .nm-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nm-comparison-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.nm-comparison-card.positive {
+  border-top: 5px solid var(--color-emerald);
+}
+
+.nm-comparison-card.negative {
+  border-top: 5px solid #EF4444;
+}
+
+.nm-comparison-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.nm-comparison-list li i.fa-check-circle {
+  color: var(--color-emerald);
+  font-size: 1.15rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.nm-comparison-list li i.fa-times-circle {
+  color: #EF4444;
+  font-size: 1.15rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   10. FAQ ACCORDION
+   ========================================================================== */
+
+.nm-accordion {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.nm-accordion-item {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.nm-accordion-item.active {
+  border-color: var(--color-cyan);
+}
+
+.nm-accordion-header {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-family-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+  text-align: left;
+}
+
+.nm-accordion-icon {
+  font-size: 0.9rem;
+  color: var(--color-cyan);
+  transition: transform var(--transition-fast);
+}
+
+.nm-accordion-item.active .nm-accordion-icon {
+  transform: rotate(180deg);
+}
+
+.nm-accordion-body {
+  padding: 0 24px 22px 24px;
+  color: var(--color-text-body);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  display: none;
+}
+
+.nm-accordion-item.active .nm-accordion-body {
+  display: block;
+}
+
+/* ==========================================================================
+   11. GLOBAL FOOTER
+   ========================================================================== */
+
+.nm-footer {
+  background-color: #071530;
+  color: #94A3B8;
+  padding: 70px 0 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nm-footer-newsletter-wrap {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 36px 40px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+@media (max-width: 991px) {
+  .nm-footer-newsletter-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.nm-newsletter-info h3 {
+  color: var(--color-white);
+  font-size: 1.45rem;
+  margin-bottom: 6px;
+}
+
+.nm-newsletter-info p {
+  color: #94A3B8;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.nm-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.nm-newsletter-input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.nm-newsletter-input-group input {
+  flex-grow: 1;
+  padding: 12px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+}
+
+.nm-newsletter-input-group input::placeholder {
+  color: #94A3B8;
+}
+
+.nm-newsletter-input-group button {
+  background: var(--color-accent-gradient);
+  color: var(--color-white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.nm-newsletter-input-group button:hover {
+  opacity: 0.9;
+}
+
+.nm-gdpr-check {
+  font-size: 0.78rem;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Footer Navigation Columns */
+.nm-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 991px) {
+  .nm-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .nm-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nm-footer-brand p {
+  color: #94A3B8;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-top: 18px;
+}
+
+.nm-footer-col h4 {
+  color: var(--color-white);
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.nm-footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: var(--color-cyan);
+}
+
+.nm-footer-menu li {
+  margin-bottom: 10px;
+}
+
+.nm-footer-menu a {
+  color: #94A3B8;
+  font-size: 0.92rem;
+  transition: all var(--transition-fast);
+}
+
+.nm-footer-menu a:hover {
+  color: var(--color-cyan);
+  padding-left: 6px;
+}
+
+/* Footer Bottom Bar */
+.nm-footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .nm-footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+/* Toast Notifications */
+.nm-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 3000;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all var(--transition-normal);
+}
+
+.nm-toast.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.nm-toast i {
+  color: var(--color-emerald);
+  font-size: 1.3rem;
+}
+
+/* ==========================================================================
+   12. INNER PAGE UTILITIES & COMPONENTS
+   ========================================================================== */
+
+/* Breadcrumb */
+.nm-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+.nm-breadcrumb a {
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.nm-breadcrumb a:hover {
+  color: var(--color-cyan);
+}
+
+.nm-breadcrumb-separator {
+  font-size: 0.7rem;
+  color: #94A3B8;
+}
+
+/* Checkmark Lists */
+.nm-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.nm-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.nm-check-list li i {
+  color: var(--color-emerald);
+  font-size: 1.15rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* Pre-footer Call to Action Banner */
+.nm-cta-banner {
+  background: var(--color-navy-gradient);
+  border-radius: var(--radius-lg);
+  padding: 50px 48px;
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  margin: 40px 0;
+}
+
+@media (max-width: 991px) {
+  .nm-cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 24px;
+  }
+}
+
+.nm-cta-banner-content h2,
+.nm-cta-banner-content h3 {
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.nm-cta-banner-content p {
+  color: #CBD5E1;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.nm-cta-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .nm-cta-banner-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nm-cta-banner-actions .nm-btn {
+    width: 100%;
+  }
+}
+
+/* Long Form Content Layout (Legal, Policy, About) */
+.nm-content-block {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.nm-content-block h2 {
+  font-size: 1.75rem;
+  margin-top: 36px;
+  margin-bottom: 14px;
+  color: var(--color-primary);
+  border-bottom: 2px solid rgba(0, 180, 216, 0.15);
+  padding-bottom: 8px;
+}
+
+.nm-content-block h3 {
+  font-size: 1.35rem;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  color: var(--color-primary-light);
+}
+
+.nm-content-block p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--color-text-body);
+  margin-bottom: 18px;
+}
+
+.nm-content-block ul {
+  list-style: disc;
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+
+.nm-content-block ul li {
+  margin-bottom: 8px;
+  line-height: 1.65;
+}
+
+/* Interactive Calculator Box */
+.nm-calc-box {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-lg);
+}
+
+.nm-calc-range-wrap {
+  margin: 24px 0;
+}
+
+.nm-calc-slider {
+  width: 100%;
+  accent-color: var(--color-cyan);
+  height: 8px;
+  border-radius: var(--radius-full);
+  outline: none;
+}
+
+.nm-calc-output {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.nm-calc-val {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-cyan);
+}
+

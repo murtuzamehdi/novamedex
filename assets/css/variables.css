@@ -1,0 +1,66 @@
+/* ==========================================================================
+   NovaMedex Design System Tokens
+   Palette derived directly from NovaMedex Logo:
+   - Deep Healthcare Navy (#0A1F44)
+   - Deep Accent Navy (#0F2D6B)
+   - Electric Cyan (#00B4D8)
+   - Vibrant Teal (#00C9A7)
+   - Emerald Mint (#10B981)
+   ========================================================================== */
+
+:root {
+  /* Brand Colors */
+  --color-primary: #0A1F44;
+  --color-primary-dark: #071530;
+  --color-primary-light: #163B8C;
+  --color-navy-gradient: linear-gradient(135deg, #0A1F44 0%, #0F2D6B 60%, #163B8C 100%);
+  
+  --color-cyan: #00B4D8;
+  --color-teal: #00C9A7;
+  --color-emerald: #10B981;
+  --color-accent-gradient: linear-gradient(135deg, #00B4D8 0%, #00C9A7 100%);
+  --color-emerald-gradient: linear-gradient(135deg, #00C9A7 0%, #10B981 100%);
+  
+  /* Neutral & Surface Colors */
+  --color-white: #FFFFFF;
+  --color-bg-page: #F8FAFC;
+  --color-bg-alt: #F1F5F9;
+  --color-border: #E2E8F0;
+  --color-border-hover: #CBD5E1;
+  
+  /* Typography Colors */
+  --color-text-title: #0A1F44;
+  --color-text-body: #334155;
+  --color-text-muted: #64748B;
+  --color-text-light: #94A3B8;
+  --color-text-white: #FFFFFF;
+  
+  /* Typography */
+  --font-family-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(10, 31, 68, 0.05);
+  --shadow-md: 0 8px 24px rgba(10, 31, 68, 0.08);
+  --shadow-lg: 0 16px 40px rgba(10, 31, 68, 0.12);
+  --shadow-xl: 0 24px 60px rgba(10, 31, 68, 0.16);
+  --shadow-glow: 0 10px 25px rgba(0, 180, 216, 0.35);
+  --shadow-dark: 0 20px 50px rgba(0, 0, 0, 0.35);
+  
+  /* Border Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.28s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* Layout */
+  --container-max-width: 1240px;
+  --header-height: 84px;
+  --topbar-height: 40px;
+}

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 440" width="700" height="440">
+  <rect width="700" height="440" rx="16" fill="#0A1F44"/>
+  <text x="350" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" text-anchor="middle">50-State Nationwide Medical Billing Coverage</text>
+  <text x="350" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#00B4D8" text-anchor="middle">Compliant with State &amp; Federal Regulations, Local MACs &amp; Regional Commercial Payers</text>
+  
+  <!-- US Map Abstract Silhouette -->
+  <g transform="translate(60, 90)">
+    <!-- States shapes abstract background -->
+    <path fill="#132D5E" stroke="#00B4D8" stroke-width="1.2" d="M30 40 L120 30 L160 50 L220 40 L320 45 L420 35 L520 60 L560 90 L530 150 L560 210 L500 240 L440 280 L380 270 L340 300 L280 280 L220 280 L180 240 L120 250 L60 220 L30 150 Z"/>
+    
+    <!-- State Hub Pulse Points -->
+    <!-- New York -->
+    <circle cx="510" cy="80" r="7" fill="#00B4D8"/>
+    <circle cx="510" cy="80" r="14" fill="none" stroke="#00B4D8" stroke-width="1.5" opacity="0.6"/>
+    <text x="510" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">New York</text>
+
+    <!-- California / LA -->
+    <circle cx="65" cy="160" r="7" fill="#00B4D8"/>
+    <circle cx="65" cy="160" r="14" fill="none" stroke="#00B4D8" stroke-width="1.5" opacity="0.6"/>
+    <text x="65" y="185" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">California</text>
+
+    <!-- Chicago / Illinois -->
+    <circle cx="360" cy="110" r="7" fill="#00B4D8"/>
+    <circle cx="360" cy="110" r="14" fill="none" stroke="#00B4D8" stroke-width="1.5" opacity="0.6"/>
+    <text x="360" y="95" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Chicago, IL</text>
+
+    <!-- Texas / Florida -->
+    <circle cx="280" cy="240" r="6" fill="#10B981"/>
+    <text x="280" y="260" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Texas</text>
+
+    <circle cx="480" cy="230" r="6" fill="#10B981"/>
+    <text x="480" y="250" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">Florida</text>
+
+    <!-- Indiana -->
+    <circle cx="395" cy="125" r="5" fill="#00C9A7"/>
+    <text x="395" y="145" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#CBD5E1" text-anchor="middle">Indiana</text>
+
+    <!-- Additional network dots -->
+    <circle cx="150" cy="100" r="4" fill="#00B4D8" opacity="0.8"/>
+    <circle cx="230" cy="130" r="4" fill="#00B4D8" opacity="0.8"/>
+    <circle cx="180" cy="190" r="4" fill="#00B4D8" opacity="0.8"/>
+    <circle cx="320" cy="170" r="4" fill="#00B4D8" opacity="0.8"/>
+    <circle cx="440" cy="150" r="4" fill="#00B4D8" opacity="0.8"/>
+    <circle cx="460" cy="100" r="4" fill="#00B4D8" opacity="0.8"/>
+  </g>
+
+  <!-- Bottom Legend -->
+  <g transform="translate(140, 390)">
+    <circle cx="0" cy="0" r="5" fill="#00B4D8"/>
+    <text x="12" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#CBD5E1">Major Billing Operations Hubs</text>
+    
+    <circle cx="210" cy="0" r="5" fill="#10B981"/>
+    <text x="222" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#CBD5E1">Regional Specialist Networks</text>
+  </g>
+</svg>

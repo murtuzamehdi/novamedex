@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 44" width="260" height="44">
+  <rect width="260" height="44" rx="22" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+  <g transform="translate(14, 13)">
+    <path fill="#F59E0B" d="M6 0l1.8 3.6 4 .6-2.9 2.8.7 4L6 9.1l-3.6 1.9.7-4L.2 4.2l4-.6z"/>
+    <path fill="#F59E0B" d="M18 0l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4-2.9-2.8 4-.6z"/>
+    <path fill="#F59E0B" d="M30 0l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4-2.9-2.8 4-.6z"/>
+    <path fill="#F59E0B" d="M42 0l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4-2.9-2.8 4-.6z"/>
+    <path fill="#F59E0B" d="M54 0l1.8 3.6 4 .6-2.9 2.8.7 4-3.6-1.9-3.6 1.9.7-4-2.9-2.8 4-.6z"/>
+  </g>
+  <text x="82" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#0A1F44">
+    <tspan fill="#00B4D8" font-weight="800">4.9 / 5</tspan> Provider Satisfaction
+  </text>
+</svg>

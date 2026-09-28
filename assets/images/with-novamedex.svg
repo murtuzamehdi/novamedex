@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <rect width="600" height="500" rx="20" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="2"/>
+  <g transform="translate(30, 30)">
+    <rect width="160" height="36" rx="18" fill="#10B981"/>
+    <text x="80" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">WITH NOVAMEDEX</text>
+  </g>
+  <text x="30" y="110" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="800" fill="#0A1F44">Certified Revenue Cycle Management</text>
+  <g transform="translate(30, 140)">
+    <!-- Item 1 -->
+    <circle cx="16" cy="20" r="14" fill="#D1FAE5"/>
+    <text x="16" y="25" font-family="sans-serif" font-size="16" font-weight="900" fill="#059669" text-anchor="middle">✓</text>
+    <text x="42" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#0A1F44">99% Clean Claim Submission Rate</text>
+    <text x="42" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#047857">Rigorous automated claim scrubbing before submission</text>
+
+    <!-- Item 2 -->
+    <g transform="translate(0, 60)">
+      <circle cx="16" cy="20" r="14" fill="#D1FAE5"/>
+      <text x="16" y="25" font-family="sans-serif" font-size="16" font-weight="900" fill="#059669" text-anchor="middle">✓</text>
+      <text x="42" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#0A1F44">Fast 21-Day Average Payment Turnaround</text>
+      <text x="42" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#047857">Daily electronic EDI submissions directly to payers</text>
+    </g>
+
+    <!-- Item 3 -->
+    <g transform="translate(0, 120)">
+      <circle cx="16" cy="20" r="14" fill="#D1FAE5"/>
+      <text x="16" y="25" font-family="sans-serif" font-size="16" font-weight="900" fill="#059669" text-anchor="middle">✓</text>
+      <text x="42" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#0A1F44">Up to 30% Practice Revenue Increase</text>
+      <text x="42" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#047857">Total denial recovery &amp; aged receivable collection</text>
+    </g>
+
+    <!-- Item 4 -->
+    <g transform="translate(0, 180)">
+      <circle cx="16" cy="20" r="14" fill="#D1FAE5"/>
+      <text x="16" y="25" font-family="sans-serif" font-size="16" font-weight="900" fill="#059669" text-anchor="middle">✓</text>
+      <text x="42" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#0A1F44">Zero Administrative Burden for Physicians</text>
+      <text x="42" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#047857">Dedicated team of certified billers handling 100% of RCM</text>
+    </g>
+  </g>
+</svg>

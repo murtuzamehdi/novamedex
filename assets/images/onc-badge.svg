@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <rect width="240" height="80" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <g transform="translate(16, 18)">
+    <circle cx="16" cy="22" r="16" fill="#0A1F44"/>
+    <path d="M10 22l4 4 8-8" stroke="#00C9A7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <text x="58" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#0A1F44">ONC Certified</text>
+  <text x="58" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#00B4D8">Health IT Standard</text>
+  <text x="58" y="66" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#10B981">HIPAA &amp; EDI Compliant</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <rect width="600" height="500" rx="20" fill="#FFF5F5" stroke="#FED7D7" stroke-width="2"/>
+  <g transform="translate(30, 30)">
+    <rect width="180" height="36" rx="18" fill="#FEB2B2"/>
+    <text x="90" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#9B2C2C" text-anchor="middle">WITHOUT NOVAMEDEX</text>
+  </g>
+  <text x="30" y="110" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="800" fill="#742A2A">Traditional / In-House Billing</text>
+  <g transform="translate(30, 140)">
+    <!-- Item 1 -->
+    <circle cx="16" cy="20" r="14" fill="#FED7D7"/>
+    <text x="16" y="25" font-family="sans-serif" font-size="16" font-weight="900" fill="#E53E3E" text-anchor="middle">✕</text>
+    <text x="42" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#4A5568">High Claim Denial Rate (15% - 25%)</text>
+    <text x="42" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#718096">Frequent rejection due to outdated coding guidelines</text>
+
+    <!-- Item 2 -->
+    <g transform="translate(0, 60)">
+      <circle cx="16" cy="20" r="14" fill="#FED7D7"/>
+      <text x="16" y="25" font-family="sans-serif" font-size="16" font-weight="900" fill="#E53E3E" text-anchor="middle">✕</text>
+      <text x="42" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#4A5568">Slow 60-90 Day Reimbursement Turnaround</text>
+      <text x="42" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#718096">Delayed cashflow impacting practice operations</text>
+    </g>
+
+    <!-- Item 3 -->
+    <g transform="translate(0, 120)">
+      <circle cx="16" cy="20" r="14" fill="#FED7D7"/>
+      <text x="16" y="25" font-family="sans-serif" font-size="16" font-weight="900" fill="#E53E3E" text-anchor="middle">✕</text>
+      <text x="42" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#4A5568">Severe Revenue Leakage &amp; Uncollected A/R</text>
+      <text x="42" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#718096">Aging claims write-offs and lost physician income</text>
+    </g>
+
+    <!-- Item 4 -->
+    <g transform="translate(0, 180)">
+      <circle cx="16" cy="20" r="14" fill="#FED7D7"/>
+      <text x="16" y="25" font-family="sans-serif" font-size="16" font-weight="900" fill="#E53E3E" text-anchor="middle">✕</text>
+      <text x="42" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#4A5568">Heavy Staff Burden &amp; High Overhead</text>
+      <text x="42" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" fill="#718096">Staff overwhelmed with paperwork instead of patients</text>
+    </g>
+  </g>
+</svg>

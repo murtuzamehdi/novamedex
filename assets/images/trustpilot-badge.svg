@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <rect width="240" height="80" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <g transform="translate(16, 18)">
+    <svg width="24" height="24" viewBox="0 0 24 24">
+      <path fill="#00B67A" d="M12 0l3.6 8.5 9.2.8-7 6.2 2.1 9-7.9-4.8-7.9 4.8 2.1-9-7-6.2 9.2-.8z"/>
+      <path fill="#005128" d="M12 19.7l7.9 4.8-2.1-9 7-6.2-9.2-.8L12 0v19.7z"/>
+    </svg>
+  </g>
+  <text x="48" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#0A1F44">Trustpilot Rating</text>
+  <g transform="translate(48, 38)">
+    <text font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#0A1F44">4.8</text>
+    <g transform="translate(26, -11)">
+      <rect x="0" y="0" width="12" height="12" rx="2" fill="#00B67A"/>
+      <polygon points="6,1 7.2,3.8 10,4.1 7.8,6 8.5,8.8 6,7.3 3.5,8.8 4.2,6 2,4.1 4.8,3.8" fill="#FFF"/>
+      <rect x="14" y="0" width="12" height="12" rx="2" fill="#00B67A"/>
+      <polygon points="20,1 21.2,3.8 24,4.1 21.8,6 22.5,8.8 20,7.3 17.5,8.8 18.2,6 16,4.1 18.8,3.8" fill="#FFF"/>
+      <rect x="28" y="0" width="12" height="12" rx="2" fill="#00B67A"/>
+      <polygon points="34,1 35.2,3.8 38,4.1 35.8,6 36.5,8.8 34,7.3 31.5,8.8 32.2,6 30,4.1 32.8,3.8" fill="#FFF"/>
+      <rect x="42" y="0" width="12" height="12" rx="2" fill="#00B67A"/>
+      <polygon points="48,1 49.2,3.8 52,4.1 49.8,6 50.5,8.8 48,7.3 45.5,8.8 46.2,6 44,4.1 46.8,3.8" fill="#FFF"/>
+      <rect x="56" y="0" width="12" height="12" rx="2" fill="#00B67A"/>
+      <polygon points="62,1 63.2,3.8 66,4.1 63.8,6 64.5,8.8 62,7.3 59.5,8.8 60.2,6 58,4.1 60.8,3.8" fill="#FFF"/>
+    </g>
+    <text x="98" y="0" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#64748B">(200+)</text>
+  </g>
+  <text x="48" y="66" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#00B67A">Excellent • Practice Score</text>
+</svg>
