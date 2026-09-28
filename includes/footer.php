@@ -24,24 +24,6 @@
   <!-- 13. GLOBAL FOOTER -->
   <footer class="nm-footer">
     <div class="nm-container">
-      
-      <!-- Newsletter Subscription Wrap -->
-      <div class="nm-footer-newsletter-wrap">
-        <div class="nm-newsletter-info">
-          <h3>Subscribe to Our Industry Insights</h3>
-          <p>Get the latest medical coding updates, fee schedule changes, and RCM strategies delivered monthly.</p>
-        </div>
-        <form class="nm-newsletter-form">
-          <div class="nm-newsletter-input-group">
-            <input type="email" placeholder="Enter your email address *" required>
-            <button type="submit">Subscribe</button>
-          </div>
-          <label class="nm-gdpr-check">
-            <input type="checkbox" required checked>
-            <span>I accept the GDPR and privacy terms &amp; conditions.</span>
-          </label>
-        </form>
-      </div>
 
       <!-- Footer Columns Grid -->
       <div class="nm-footer-grid">

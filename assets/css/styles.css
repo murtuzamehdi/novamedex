@@ -574,6 +574,7 @@ button, input, select, textarea {
 }
 
 .nm-drawer-close {
+  margin-right: 40px;
   background: none;
   border: none;
   font-size: 1.4rem;
