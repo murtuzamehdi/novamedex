@@ -1707,3 +1707,33 @@ button, input, select, textarea {
   color: var(--color-cyan);
 }
 
+@media (max-width: 767px) {
+  .nm-btn-expert {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .nm-topbar-flex {
+    justify-content: center;
+    padding: 8px 12px;
+  }
+
+  .nm-topbar-left {
+    flex-wrap: wrap;            /* allow items to drop to a 2nd row */
+    justify-content: center;
+    gap: 8px 14px;
+    width: 100%;
+  }
+
+  .nm-topbar-left a,
+  .nm-topbar-badge {
+    white-space: nowrap;        /* stop "Contact Us" / "Near Me" from breaking into 2 lines */
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .nm-topbar-badge {
+    padding: 4px 10px;
+  }
+}
+
