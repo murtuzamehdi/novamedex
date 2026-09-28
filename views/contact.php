@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
+<head>
 <?php include('includes/head.php');?>
+</head>
 <body>
 
   
@@ -71,7 +73,7 @@
                 <div class="nm-service-icon" style="margin-bottom:0; width:48px; height:48px; font-size:1.2rem;"><i class="fa-solid fa-envelope"></i></div>
                 <div>
                   <strong style="display:block; color:var(--color-primary);">Support &amp; Inquiries:</strong>
-                  <a href="mailto:support@novamedex.com" style="color:var(--color-text-body);">support@novamedex.com</a>
+                  <a href="mailto:support@novamedex.co" style="color:var(--color-text-body);">support@novamedex.co</a>
                 </div>
               </div>
               <div style="display:flex; align-items:center; gap:14px;">

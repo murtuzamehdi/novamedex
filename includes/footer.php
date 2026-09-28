@@ -38,7 +38,7 @@
           </p>
           <div style="margin-top:16px; display:flex; flex-direction:column; gap:8px; font-size:0.9rem;">
             <div><i class="fa-solid fa-phone" style="color:var(--color-cyan); margin-right:8px;"></i> <a href="tel:+13467043180" style="color:#CBD5E1;">+1(346) 704-3180</a></div>
-            <div><i class="fa-solid fa-envelope" style="color:var(--color-cyan); margin-right:8px;"></i> <a href="mailto:support@novamedex.com" style="color:#CBD5E1;">support@novamedex.com</a></div>
+            <div><i class="fa-solid fa-envelope" style="color:var(--color-cyan); margin-right:8px;"></i> <a href="mailto:support@novamedex.co" style="color:#CBD5E1;">support@novamedex.co</a></div>
             <div><i class="fa-solid fa-shield-halved" style="color:var(--color-emerald); margin-right:8px;"></i> Built with HIPAA &amp; HITECH Compliance</div>
             <div><i class="fa-solid fa-location" style="color:var(--color-emerald); margin-right:8px;"></i> 948 Winthrop Drive East Meadow NY 11554</div>
           </div>

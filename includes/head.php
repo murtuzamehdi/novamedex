@@ -10,8 +10,6 @@ if (isset($_SERVER['HTTPS'])) {
 
 ?>
 
-<!-- <head> -->
-  <head>
   <base href="<?= $requesMet.'://'.$_SERVER['HTTP_HOST'].'/' ?>">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,4 +28,3 @@ if (isset($_SERVER['HTTPS'])) {
   <!-- Clean Modular CSS -->
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-</head>
